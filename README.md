@@ -39,6 +39,6 @@ npm install
 npm start
 ```
 
-Then open http://localhost:3000. Set `PORT` to use another port, as in `PORT=8080 npm start` for http://localhost:8080. The server listens on `0.0.0.0`.
+Then open http://localhost:3000. Set `PORT` to use another port, as in `PORT=8080 npm start` for http://localhost:8080. The server listens on `0.0.0.0`, every IPv4 network interface.
 
-The page fetches `logit_lens_grid_sweep.json` by a relative path, so a static file server run from the repository's root also works, such as `python3 -m http.server` (then open http://localhost:8000).
+The page fetches `logit_lens_grid_sweep.json` by a relative path, so a static file server run from the repository's root also works, such as `python3 -m http.server --bind 127.0.0.1` (then open http://127.0.0.1:8000).
